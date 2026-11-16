@@ -1,0 +1,874 @@
+/* ========================================
+   Masjid Al-Ikhsan - Custom Styles
+   Islamic Modern Theme: Green, White, Cream
+======================================== */
+
+:root {
+  --primary-green: #1a5f4a;
+  --dark-green: #0d3d2e;
+  --sage-green: #7a9e8e;
+  --light-green: #e8f0eb;
+  --cream: #f8f4ec;
+  --cream-dark: #f0e9db;
+  --white: #ffffff;
+  --text-dark: #2c3e50;
+  --text-muted: #6c757d;
+  --border-soft: #e0e0e0;
+  --shadow-soft: 0 4px 20px rgba(26, 95, 74, 0.08);
+  --shadow-hover: 0 8px 30px rgba(26, 95, 74, 0.15);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Arabic Font */
+.arabic-text {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  direction: rtl;
+}
+
+/* ========== TOP BAR ========== */
+.top-bar {
+  background: var(--dark-green);
+  color: var(--white);
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+.top-bar a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.top-bar a:hover {
+  color: #a8d5c4;
+}
+
+.top-bar .social-icons a {
+  margin-left: 12px;
+  font-size: 1rem;
+}
+
+.top-bar .contact-info span {
+  margin-right: 20px;
+}
+
+.top-bar .contact-info i {
+  margin-right: 6px;
+  color: #a8d5c4;
+}
+
+/* ========== NAVBAR ========== */
+.navbar-custom {
+  background: var(--white);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+  padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--primary-green) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-brand img {
+  height: 42px;
+  width: auto;
+}
+
+.navbar-brand .mosque-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem !important;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-green) !important;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 2px;
+}
+
+.btn-login {
+  background: var(--primary-green);
+  color: white !important;
+  border: none;
+  padding: 0.45rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-login:hover {
+  background: var(--dark-green);
+  color: white !important;
+  transform: translateY(-1px);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+  position: relative;
+  height: 320px;
+  background: linear-gradient(135deg, rgba(13, 61, 46, 0.75), rgba(26, 95, 74, 0.65)),
+              url('https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-arabic {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  opacity: 0.95;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-desc {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-hero {
+  background: var(--white);
+  color: var(--primary-green);
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.btn-hero:hover {
+  background: var(--cream);
+  color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+  padding: 40px 0 60px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.section-title .ornament {
+  width: 28px;
+  height: 28px;
+  background: var(--primary-green);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.section-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  padding-left: 40px;
+}
+
+/* News Cards */
+.news-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  margin-bottom: 20px;
+  border: 1px solid rgba(26, 95, 74, 0.06);
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+}
+
+.news-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.news-card .news-img {
+  width: 180px;
+  min-width: 180px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card .news-body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.news-card .news-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-card .news-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.news-card .news-title a:hover {
+  color: var(--primary-green);
+}
+
+.news-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.news-meta i {
+  color: var(--sage-green);
+  margin-right: 4px;
+}
+
+.btn-read-more {
+  font-size: 0.8rem;
+  color: var(--primary-green);
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-read-more:hover {
+  color: var(--dark-green);
+}
+
+/* Prayer Schedule Card */
+.prayer-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(26, 95, 74, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 90px;
+}
+
+.prayer-header {
+  background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+  color: white;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.prayer-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.prayer-header .location {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.prayer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prayer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: var(--transition);
+}
+
+.prayer-item:last-child {
+  border-bottom: none;
+}
+
+.prayer-item:nth-child(even) {
+  background: #f8faf9;
+}
+
+.prayer-item:hover {
+  background: var(--light-green);
+}
+
+.prayer-item .prayer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prayer-item .prayer-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 0.95rem;
+}
+
+.prayer-item .prayer-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.prayer-item .prayer-time {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-green);
+  font-variant-numeric: tabular-nums;
+}
+
+.prayer-footer {
+  padding: 12px 20px;
+  background: var(--cream);
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.prayer-loading {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-muted);
+}
+
+/* About Short */
+.about-short {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+  margin-top: 30px;
+  border: 1px solid rgba(26, 95, 74, 0.06);
+}
+
+.about-short h3 {
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+  color: white;
+  padding: 50px 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--cream);
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-header .breadcrumb {
+  justify-content: center;
+  background: transparent;
+  margin: 0;
+}
+
+.page-header .breadcrumb-item a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.page-header .breadcrumb-item.active {
+  color: white;
+}
+
+/* ========== CARDS & COMPONENTS ========== */
+.card-custom {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(26, 95, 74, 0.06);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.card-custom:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.card-custom .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-custom .card-body {
+  padding: 20px;
+}
+
+.card-custom .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.card-custom .card-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.badge-custom {
+  background: var(--light-green);
+  color: var(--primary-green);
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Agenda Item */
+.agenda-item {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--primary-green);
+  transition: var(--transition);
+}
+
+.agenda-item:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.agenda-date {
+  background: var(--primary-green);
+  color: white;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.agenda-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.agenda-date .month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Gallery */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 61, 46, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item .overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Modal Gallery */
+.modal-gallery .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-gallery .modal-body {
+  padding: 0;
+  text-align: center;
+}
+
+.modal-gallery img {
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+/* Laporan Table */
+.table-custom {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.table-custom thead {
+  background: var(--primary-green);
+  color: white;
+}
+
+.table-custom th {
+  font-weight: 500;
+  border: none;
+  padding: 14px 16px;
+}
+
+.table-custom td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  border-color: #f0f0f0;
+}
+
+/* Login Form */
+.login-card {
+  max-width: 420px;
+  margin: 40px auto;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 36px;
+  border: 1px solid rgba(26, 95, 74, 0.08);
+}
+
+.login-card .form-control {
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+}
+
+.login-card .form-control:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(26, 95, 74, 0.15);
+}
+
+.btn-primary-custom {
+  background: var(--primary-green);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-primary-custom:hover {
+  background: var(--dark-green);
+}
+
+/* Footer */
+.footer {
+  background: var(--dark-green);
+  color: rgba(255,255,255,0.85);
+  padding: 50px 0 20px;
+  margin-top: 40px;
+}
+
+.footer h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+}
+
+.footer a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer .social-links a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  transition: var(--transition);
+}
+
+.footer .social-links a:hover {
+  background: var(--primary-green);
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Utilities */
+.text-green {
+  color: var(--primary-green) !important;
+}
+
+.bg-cream {
+  background: var(--cream) !important;
+}
+
+.bg-light-green {
+  background: var(--light-green) !important;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .hero-section {
+    height: 280px;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+  }
+  .hero-arabic {
+    font-size: 1.3rem;
+  }
+  .news-card {
+    height: auto;
+    flex-direction: column;
+  }
+  .news-card .news-img {
+    width: 100%;
+    height: 160px;
+    min-width: 100%;
+  }
+  .prayer-card {
+    position: static;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-bar .contact-info span {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .hero-section {
+    height: 260px;
+  }
+  .hero-title {
+    font-size: 1.4rem;
+  }
+  .hero-desc {
+    font-size: 0.9rem;
+  }
+  .section-title h2 {
+    font-size: 1.3rem;
+  }
+  .agenda-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+  .hero-section {
+    height: 240px;
+  }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-width: 0.15em;
+}
+
+/* Islamic ornament divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 12px;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--sage-green), transparent);
+  flex: 1;
+  max-width: 80px;
+}
+
+.ornament-divider i {
+  color: var(--sage-green);
+  font-size: 0.9rem;
+}

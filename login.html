@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk | Masjid Al-Ikhsan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div class="contact-info">
+          <span><i class="fab fa-whatsapp"></i> +62 812-3456-7890</span>
+          <span><i class="fas fa-envelope"></i> info@masjidalikhsan.id</span>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="mosque-icon"><i class="fas fa-mosque"></i></div>
+        <span>Masjid Al-Ikhsan</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+          <li class="nav-item"><a class="nav-link" href="jadwal.html">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link" href="tausiyah.html">Tausiyah</a></li>
+          <li class="nav-item"><a class="nav-link" href="laporan.html">Laporan</a></li>
+          <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        </ul>
+        <a href="login.html" class="btn btn-login"><i class="fas fa-sign-in-alt"></i> Masuk</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="login-card">
+        <div class="text-center mb-4">
+          <div class="mosque-icon mx-auto mb-3" style="width:60px;height:60px;font-size:1.5rem;">
+            <i class="fas fa-mosque"></i>
+          </div>
+          <h4 class="text-green">Masuk ke Akun</h4>
+          <p class="text-muted small">Untuk pengurus dan admin masjid</p>
+        </div>
+        <form onsubmit="handleLogin(event)">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="email@contoh.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Kata Sandi</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label small" for="rememberMe">Ingat saya</label>
+          </div>
+          <button type="submit" class="btn btn-primary-custom text-white w-100">Masuk</button>
+        </form>
+        <p class="text-center small text-muted mt-4 mb-0">
+          Fitur login ini masih demo. Hubungkan ke backend untuk autentikasi sebenarnya.
+        </p>
+        <div class="text-center mt-3">
+          <a href="index.html" class="small text-green"><i class="fas fa-arrow-left me-1"></i> Kembali ke Beranda</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;margin:0;padding:20px 0;">
+        <p class="mb-0">&copy; 2026 Masjid Al-Ikhsan. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
